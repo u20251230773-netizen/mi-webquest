@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorias que permanecen</title>
+  <style>
+    :root {
+      --rosado: #382b70;
+      --morado-claro: #eeeafd;
+      --amarillo: #b84f45;
+      --texto: #292638;
+      --fondo: #faf9f6;
+      --blanco: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--fondo);
+      line-height: 1.65;
+    }
+    header {
+      color: white;
+      background: linear-gradient(135deg, #30245f, #57479a);
+      padding: 58px 22px 48px;
+      text-align: center;
+    }
+    .etiqueta {
+      display: inline-block;
+      background: var(--terracota);
+      padding: 6px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      letter-spacing: .3px;
+    }
+    header h1 {
+      max-width: 900px;
+      margin: 20px auto 10px;
+      font-family: Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.12;
+    }
+    header p { margin: 8px auto; max-width: 760px; }
+    .datos { margin-top: 24px; font-size: .98rem; }
+    .portada {
+      max-width: 1000px;
+      margin: 30px auto 0;
+      padding: 0 18px;
+    }
+    .portada img {
+      width: 100%;
+      max-height: 390px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: white;
+      box-shadow: 0 2px 9px #00000014;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+      padding: 12px 8px;
+    }
+    nav a {
+      color: var(--morado);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 11px;
+      border-radius: 6px;
+      font-size: .94rem;
+    }
+    nav a:hover { background: var(--morado-claro); }
+    main { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+    section {
+      background: var(--blanco);
+      margin: 0 0 25px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px #211b3810;
+      scroll-margin-top: 90px;
+    }
+    h2 {
+      color: var(--morado);
+      font-family: Georgia, serif;
+      font-size: 2rem;
+      border-left: 6px solid var(--terracota);
+      padding-left: 14px;
+      margin-top: 0;
+    }
+    h3 { color: var(--terracota); margin-bottom: 8px; }
+    .subtitulo { color: #665d7f; font-weight: bold; margin-top: -8px; }
+    .foto {
+      margin: 22px 0;
+      text-align: center;
+    }
+    .foto img {
+      width: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      border-radius: 9px;
+      display: block;
+    }
+    .foto figcaption { color: #696477; font-size: .9rem; margin-top: 7px; }
+    .aviso-imagen {
+      border: 2px dashed #a99ecb;
+      background: #f6f3ff;
+      border-radius: 9px;
+      padding: 22px;
+      text-align: center;
+      color: #574b7c;
+      margin: 20px 0;
+    }
+    .paso {
+      border-left: 4px solid #c8bde9;
+      padding: 4px 0 4px 17px;
+      margin: 18px 0;
+    }
+    .recursos a { color: #49358e; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ddd8e8; padding: 11px; text-align: left; }
+    th { background: var(--morado); color: white; }
+    tr:nth-child(even) { background: #f7f5fc; }
+    .pregunta {
+      background: var(--morado-claro);
+      border-radius: 9px;
+      padding: 17px;
+      font-weight: bold;
+      color: var(--morado);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 18px;
+      background: #2f2754;
+      color: white;
+    }
+    footer p { margin: 6px; }
+    @media (max-width: 600px) {
+      section { padding: 21px 17px; }
+      nav a { font-size: .85rem; padding: 7px; }
+      table { font-size: .9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="inicio">
+    <span class="etiqueta">CIENCIAS SOCIALES</span>
+    <h1>Voces que cuentan: memorias que permanecen</h1>
+    <p>Una aventura por la memoria histórica y la tradición oral</p>
+    <div class="datos">
+      <p><strong>Autor(a):</strong> Escribe aquí tu nombre</p>
+      <p><strong>Nivel:</strong> Secundaria, grados 9.º y 10.º</p>
+      <p><strong>Área:</strong> Ciencias Sociales</p>
+      <p><strong>Correo:</strong> Escribe aquí tu correo (opcional)</p>
+    </div>
+
+    <!-- IMAGEN DE PORTADA:
+         Guarda una imagen dentro de una carpeta llamada "imagenes"
+         y nómbrala portada.jpg. Luego usa:
+         <img src="imagenes/portada.jpg" alt="Personas mayores compartiendo sus recuerdos">
+    -->
+    <div class="portada">
+      <div class="aviso-imagen">
+        <strong>ESPACIO PARA LA IMAGEN DE PORTADA</strong><br>
+        Reemplaza este recuadro por la etiqueta &lt;img&gt; que se explica en los comentarios del código.
+      </div>
+      <!-- Cuando tengas la imagen, borra el recuadro anterior y descomenta esta línea:
+      <img src="imagenes/portada.jpg" alt="Personas mayores compartiendo sus recuerdos">
+      -->
+    </div>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#introduccion">Introducción</a>
+    <a href="#tarea">Tarea</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#recursos">Recursos</a>
+    <a href="#evaluacion">Evaluación</a>
+    <a href="#conclusion">Conclusión</a>
+    <a href="#creditos">Créditos</a>
+  </nav>
+
+  <main>
+    <section id="introduccion">
+      <h2>Introducción</h2>
+      <p class="subtitulo">Voces que cuentan, memorias que permanecen</p>
+      <p>¿Alguna vez te has preguntado cómo era tu comunidad hace algunos años o qué acontecimientos marcaron la vida de tus abuelos?</p>
+      <p>La memoria histórica y la tradición oral nos permiten conocer nuestro pasado a través de los recuerdos, relatos y experiencias de las personas. En esta WebQuest te convertirás en un investigador de la memoria y descubrirás la importancia de escuchar y preservar las historias de tu familia y comunidad.</p>
+
+      <!-- IMAGEN DE INTRODUCCIÓN: ejemplo de código:
+      <figure class="foto">
+        <img src="imagenes/introduccion.jpg" alt="Una persona mayor contando una historia a jóvenes">
+        <figcaption>Los relatos de nuestros mayores conservan recuerdos y experiencias.</figcaption>
+      </figure>
+      -->
+      <div class="aviso-imagen">ESPACIO PARA IMAGEN 2: una persona mayor conversando con jóvenes.</div>
+    </section>
+
+    <section id="tarea">
+      <h2>Tarea</h2>
+      <p class="subtitulo">Guardianes de la memoria: reconstruyendo nuestras historias</p>
+
+      <!-- IMAGEN DE TAREA: cambia el nombre del archivo si lo deseas.
+      <figure class="foto">
+        <img src="imagenes/tarea.jpg" alt="Álbum de fotografías familiares antiguas">
+        <figcaption>Las fotografías también ayudan a conservar la memoria familiar.</figcaption>
+      </figure>
+      -->
+      <div class="aviso-imagen">ESPACIO PARA IMAGEN 3: fotografías antiguas, álbum familiar o recuerdos.</div>
+
+      <p>Tu misión será recuperar una historia de tu familia o comunidad mediante una entrevista a una persona mayor. Para lograrlo deberás:</p>
+      <ol>
+        <li>Investigar sobre la memoria histórica y la tradición oral.</li>
+        <li>Consultar los recursos proporcionados en esta WebQuest.</li>
+        <li>Entrevistar a una persona mayor sobre sus recuerdos, costumbres y experiencias.</li>
+        <li>Identificar los recuerdos y acontecimientos más importantes de su relato.</li>
+        <li>Elaborar una crónica ilustrada, una infografía o un pequeño álbum de memoria.</li>
+        <li>Compartir tu investigación con tus compañeros.</li>
+      </ol>
+      <h3>Producto final</h3>
+      <p>Presentarás una producción titulada <strong>«Una historia para recordar»</strong>, que incluya una breve presentación de la persona entrevistada (con su autorización), su relato, los recuerdos más importantes y una reflexión sobre la importancia de conservar esa historia. Puedes incluir fotografías o ilustraciones si tienes permiso para utilizarlas.</p>
+    </section>
+
+    <section id="proceso">
+      <h2>Proceso</h2>
+      <p class="subtitulo">¡Convirtámonos en investigadores!</p>
+
+      <!-- IMAGEN DE PROCESO: ejemplo:
+      <figure class="foto">
+        <img src="imagenes/proceso.jpg" alt="Estudiante tomando notas durante una entrevista">
+        <figcaption>Investigar también significa escuchar con atención.</figcaption>
+      </figure>
+      -->
+      <div class="aviso-imagen">ESPACIO PARA IMAGEN 4: entrevista, cuaderno de notas o grabadora.</div>
+
+      <div class="paso">
+        <h3>Paso 1. Exploremos nuestros conocimientos</h3>
+        <p>Responde en tu cuaderno: ¿qué entiendes por memoria histórica?, ¿qué es la tradición oral?, ¿por qué es importante escuchar las historias de nuestros mayores? y ¿qué acontecimientos importantes conoces de tu familia o comunidad?</p>
+      </div>
+      <div class="paso">
+        <h3>Paso 2. Investiguemos y aprendamos</h3>
+        <p>Consulta los recursos digitales de esta WebQuest. Lee los documentos y observa los videos. Escribe con tus propias palabras qué significan memoria histórica, memoria colectiva y tradición oral.</p>
+      </div>
+      <div class="paso">
+        <h3>Paso 3. Convirtámonos en investigadores</h3>
+        <p>Selecciona una persona mayor de tu familia o comunidad que esté dispuesta a compartir sus recuerdos. Realiza la entrevista con estas preguntas:</p>
+        <ol>
+          <li>¿Cómo era el lugar donde vivía durante su infancia o juventud?</li>
+          <li>¿Qué costumbres y tradiciones recuerda de aquella época?</li>
+          <li>¿Qué acontecimientos importantes marcaron su vida o la de su comunidad?</li>
+          <li>¿Cómo se divertían y qué actividades realizaban las personas?</li>
+          <li>¿Qué cambios ha observado en su comunidad con el paso de los años?</li>
+          <li>¿Qué historia considera importante transmitir a las nuevas generaciones?</li>
+          <li>¿Qué enseñanza le gustaría dejarles a los jóvenes?</li>
+        </ol>
+        <p><strong>Importante:</strong> escucha con respeto, solicita autorización antes de grabar o tomar fotografías y no insistas en preguntas que puedan generar incomodidad.</p>
+      </div>
+      <div class="paso">
+        <h3>Paso 4. Organicemos los recuerdos</h3>
+        <p>Identifica los recuerdos más importantes, las costumbres mencionadas, los acontecimientos que marcaron la vida de la persona, los cambios de la comunidad y los conocimientos que pueden transmitirse a nuevas generaciones.</p>
+      </div>
+      <div class="paso">
+        <h3>Paso 5. Construyamos nuestra producción</h3>
+        <p>Elabora una crónica ilustrada, infografía o álbum de memoria. Incluye un título, la presentación del entrevistado, el relato, imágenes o ilustraciones y una reflexión personal.</p>
+      </div>
+      <div class="paso">
+        <h3>Paso 6. Compartamos nuestras historias</h3>
+        <p>Presenta tu producción ante tus compañeros. Explica qué historia recuperaste y por qué es importante conservarla. Para cerrar, conversen sobre esta pregunta: <strong>¿Por qué escuchar y conservar las historias de nuestros mayores es una forma de proteger nuestra memoria colectiva?</strong></p>
+      </div>
+    </section>
+
+    <section id="recursos" class="recursos">
+      <h2>Recursos</h2>
+      <p class="subtitulo">Explora, descubre y aprende</p>
+
+      <!-- IMAGEN DE RECURSOS: ejemplo:
+      <figure class="foto">
+        <img src="imagenes/recursos.jpg" alt="Libros y documentos en un archivo histórico">
+      </figure>
+      -->
+      <div class="aviso-imagen">ESPACIO PARA IMAGEN 5: libros, archivos, documentos o biblioteca.</div>
+
+      <p>Consulta estos sitios para ampliar tus conocimientos sobre memoria histórica y tradición oral:</p>
+      <ol>
+        <li><a href="https://centrodememoriahistorica.gov.co/" target="_blank" rel="noopener">Centro Nacional de Memoria Histórica</a>: conoce iniciativas y materiales sobre las memorias de las comunidades en Colombia.</li>
+        <li><a href="https://bibliotecanacional.gov.co/" target="_blank" rel="noopener">Biblioteca Nacional de Colombia</a>: explora colecciones y recursos relacionados con el patrimonio documental y cultural.</li>
+        <li><a href="https://www.centrodememoriahistorica.gov.co/micrositios/caminosParaLaMemoria/" target="_blank" rel="noopener">Caminos para la memoria</a>: consulta este recurso del Centro Nacional de Memoria Histórica.</li>
+      </ol>
+      <h3>Preguntas para orientar tu consulta</h3>
+      <ul>
+        <li>¿Qué importancia tiene la memoria histórica para una sociedad?</li>
+        <li>¿Cómo se transmite la tradición oral?</li>
+        <li>¿Qué papel cumplen los adultos mayores en la conservación de la memoria?</li>
+        <li>¿Por qué es importante preservar los testimonios de las comunidades?</li>
+      </ul>
+    </section>
+
+    <section id="evaluacion">
+      <h2>Evaluación</h2>
+      <p class="subtitulo">¿Cómo será evaluada nuestra investigación?</p>
+      <p>La actividad tendrá una valoración de 100 puntos. Se tendrá en cuenta el compromiso, la investigación, la creatividad y la capacidad de reflexión durante el desarrollo de la WebQuest.</p>
+      <table>
+        <thead>
+          <tr><th>Criterio</th><th>Puntaje</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Comprensión de los conceptos</td><td>20 puntos</td></tr>
+          <tr><td>Investigación y consulta de recursos</td><td>20 puntos</td></tr>
+          <tr><td>Realización de la entrevista</td><td>20 puntos</td></tr>
+          <tr><td>Elaboración del producto final</td><td>25 puntos</td></tr>
+          <tr><td>Socialización y reflexión</td><td>15 puntos</td></tr>
+          <tr><th>Total</th><th>100 puntos</th></tr>
+        </tbody>
+      </table>
+      <p>La evaluación no se limitará al resultado final: también tendrá en cuenta el proceso de investigación, la participación y los aprendizajes construidos durante la actividad.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusión</h2>
+      <p class="subtitulo">Las historias que no debemos olvidar</p>
+
+      <!-- IMAGEN DE CONCLUSIÓN: ejemplo:
+      <figure class="foto">
+        <img src="imagenes/conclusion.jpg" alt="Abuelos y jóvenes mirando fotografías familiares">
+        <figcaption>Compartir recuerdos fortalece los vínculos entre generaciones.</figcaption>
+      </figure>
+      -->
+      <div class="aviso-imagen">ESPACIO PARA IMAGEN 6: distintas generaciones mirando fotografías o conversando.</div>
+
+      <p>A través de esta WebQuest hemos comprendido que la memoria histórica y la tradición oral son fundamentales para conocer nuestro pasado, reconocer las experiencias de las comunidades y fortalecer nuestra identidad cultural.</p>
+      <p>Escuchar las historias de nuestros abuelos, familiares y miembros de la comunidad nos permite descubrir acontecimientos, costumbres y experiencias que forman parte de nuestra historia. Conservar estos relatos significa reconocer el valor de las personas, aprender del pasado y comprender que todos podemos aportar a la construcción de la memoria colectiva.</p>
+      <div class="pregunta">Para reflexionar: Si las personas dejaran de contar sus historias, ¿qué recuerdos, conocimientos y tradiciones podrían desaparecer con el paso del tiempo?</div>
+    </section>
+
+    <section id="creditos">
+      <h2>Créditos</h2>
+      <p><strong>Elaborado por:</strong> Escribe aquí tu nombre.</p>
+      <p><strong>Área:</strong> Ciencias Sociales.</p>
+      <p><strong>Tema:</strong> Memoria histórica y tradición oral.</p>
+      <p><strong>Herramienta de elaboración:</strong> HTML y CSS.</p>
+      <p><strong>Recursos de consulta:</strong> Centro Nacional de Memoria Histórica y Biblioteca Nacional de Colombia.</p>
+      <p><strong>Institución:</strong> Escribe aquí el nombre de tu institución.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Voces que cuentan: memorias que permanecen</strong></p>
+    <p>Escuchar el pasado nos ayuda a comprender el presente.</p>
+    <p><a href="#inicio" style="color:white;">Volver al inicio ↑</a></p>
+  </footer>
+
+</body>
+</html>
